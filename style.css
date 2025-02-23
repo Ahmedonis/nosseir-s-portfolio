@@ -1,0 +1,63 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  body{
+    background-color: #131A22;
+  }
+  
+  .navbar{
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo{
+    display: flex;
+    width: 40%;
+  }
+  
+  .pfp {
+    position: relative;
+    width: 50px; /* adjust to your desired size */
+    height: 50px; /* adjust to your desired size */
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .brand-name{
+    z-index: -1;
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);  /* Slightly lower than final position */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .pfp:hover ~ .brand-name {
+    opacity: 1;                   /* Fade in */
+    transform: translateY(0); 
+  }
+  
+
+  
+  .nav-links{
+    display: flex;
+    justify-content: end;
+    width: 70%;
+  }
+  
+  .nav-link{
+    color: white;
+    text-decoration: none;
+  }
+  
