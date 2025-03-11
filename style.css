@@ -1,9 +1,32 @@
   body{
-    background-color: #F9F9F9;
+    background-color: #ffffff;
     height: 900px;
     margin: 0px;
   }
-  
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  /* .josefin {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  }*/
+
+  /* .inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+ */
+
+ /* .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+  */
+
   p, h1, h2{
     color: rgb(255, 255, 255);
   }
@@ -19,17 +42,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 75%;
     padding: 11px;
     padding-right: 30px;
     padding-left: 30px;
     position: fixed;
     background-color: transparent;
-    height: 50px;
-    border-radius: 1000px;
+    height: 40px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(1px);
-    box-shadow: 0px 4px 10px rgba(105, 105, 105, 0.3); /* ✅ Darker shadow for depth */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
   
@@ -65,18 +88,26 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     background-color: #F9F9F9;
-    border-radius: 50px;
+    border-radius: 10px;
     border: none;
     padding: 10px 20px;
+    transition-duration: 0.3s;
+  }
+
+  .nav-btn:hover{
+    translate: 0px -3px;
+    box-shadow: #F9F9F9 0px 0px 80px;
   }
   
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 
   .nav-link {
     position: relative;
-    text-decoration: none;
     color: #ffffff;
     transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
 }
 
 .nav-link::after {
@@ -100,7 +131,11 @@
 }
 
 .home-section{
-  background-color: #070505;
+  background-color: #050507;
+  background: 
+  radial-gradient(circle at left top, rgba(245, 241, 230, 0.2), rgba(18, 18, 18, 0) 20%),
+  radial-gradient(circle at right top, rgba(245, 241, 230, 0.2), rgba(18, 18, 18, 0) 40%),
+  #121212;
   height: 100vh;
   width: 100%;
 }
@@ -125,32 +160,105 @@
   height: 250px;
 }
 
-.home-p{
-  width: 500px;
-}
-
-.home-h1{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.home-h2{
-  margin-top: 0px;
-}
-
-.home-btns{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-grow: 1;
-  align-items: end;
-}
 
 .home-img{
   border-radius: 1000px;
   width: 250px;
   height: 250px;
   object-fit: cover;
+  box-shadow: 0px 0px 80px rgba(245, 241, 230, 0.2);
 }
 
+.home-p{
+  width: 518px;
+  font-size: 18px;
+  color: rgb(190, 190, 190);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;  
+}
 
+.home-h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.home-h1::after{
+  content: "👋";
+  display: inline-block;
+  transform-origin: bottom center;
+}
+
+.home-h1:hover::after {
+  animation: wave 0.5s ease-in-out;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-25deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-15deg); }
+  80% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.home-h2{
+  margin-top: 0px;
+  margin-bottom: 4px;
+  font-size: 26px;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.home-btns{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-items: end;
+}
+
+.home-contact{
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  border: none;
+  padding: 15px 40px;
+  transition-duration: 0.3s;
+}
+
+.home-contact:hover{
+  translate: 0px -3px;
+  box-shadow: #F9F9F9 0px 0px 80px;
+}
+
+.home-services{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 10px;
+  border: none;
+  padding: 15px 25px;
+  transition-duration: 0.3s;
+}
+
+.home-services:hover{
+  translate: 0px -3px;
+}
+
+.lower-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+}
